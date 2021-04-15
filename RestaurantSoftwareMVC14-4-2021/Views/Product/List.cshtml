@@ -1,0 +1,16 @@
+﻿@model ProductsListViewModel
+
+
+<h1>Menu</h1>
+
+@foreach (var product in Model.Products)
+{
+    <partial name="_ProductCard" model="product" />
+}
+
+<br />
+<p class="button">
+    <a class="btn btn-primary"
+       asp-controller="Product"
+       asp-action="Create">Create a new product</a>
+</p>
